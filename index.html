@@ -1,128 +1,93 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2820
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Valentine ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffccdd;
+            overflow: hidden;
+        }
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html>\
-<head>\
-    <title>Be My Valentine \uc0\u10084 \u65039 </title>\
-    <style>\
-        body \{\
-            margin: 0;\
-            padding: 0;\
-            text-align: center;\
-            font-family: 'Comic Sans MS', cursive;\
-            background-image: url('https://images.unsplash.com/photo-1518893494097-7a2f8f07f6f0');\
-            background-size: cover;\
-            background-position: center;\
-            overflow: hidden;\
-            color: white;\
-        \}\
-\
-        h1 \{\
-            margin-top: 100px;\
-            font-size: 45px;\
-            text-shadow: 2px 2px 10px black;\
-        \}\
-\
-        .button \{\
-            padding: 18px 40px;\
-            font-size: 22px;\
-            margin: 20px;\
-            background-color: #ff0066;\
-            color: white;\
-            border: none;\
-            border-radius: 50px;\
-            cursor: pointer;\
-            transition: 0.3s;\
-        \}\
-\
-        .button:hover \{\
-            transform: scale(1.1);\
-            background-color: #ff3385;\
-        \}\
-\
-        #surprise \{\
-            display: none;\
-            margin-top: 50px;\
-            animation: pop 1s ease;\
-        \}\
-\
-        @keyframes pop \{\
-            from \{ transform: scale(0); \}\
-            to \{ transform: scale(1); \}\
-        \}\
-\
-        img \{\
-            width: 350px;\
-            border-radius: 20px;\
-            box-shadow: 0 0 30px pink;\
-        \}\
-\
-        .heart \{\
-            position: absolute;\
-            font-size: 25px;\
-            animation: float 6s linear infinite;\
-        \}\
-\
-        @keyframes float \{\
-            from \{ transform: translateY(100vh); opacity:1; \}\
-            to \{ transform: translateY(-10vh); opacity:0; \}\
-        \}\
-    </style>\
-</head>\
-\
-<body>\
-\
-<h1>Will You Be My Valentine, IQRA? \uc0\u55357 \u56470 \u55356 \u57145 </h1>\
-\
-<button class="button" onclick="showLove()">YES \uc0\u55357 \u56472 </button>\
-<button class="button" onclick="showLove()">YES OBVIOUSLY \uc0\u55357 \u56844 </button>\
-\
-<div id="surprise">\
-    <h2>YOU JUST MADE ME THE HAPPIEST PERSON ALIVE \uc0\u55357 \u56877 \u10084 \u65039 </h2>\
-    <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">\
-    <h2>I LOVE YOU SO MUCH \uc0\u55356 \u57145 \u10024 </h2>\
-</div>\
-\
-<audio id="music" autoplay loop>\
-    <source src="https://www2.cs.uic.edu/~i101/SoundFiles/CanonInD.mp3" type="audio/mpeg">\
-</audio>\
-\
-<script>\
-    function showLove() \{\
-        document.getElementById("surprise").style.display = "block";\
-        createHearts();\
-        createConfetti();\
-        document.getElementById("music").play();\
-    \}\
-\
-    function createHearts() \{\
-        for (let i = 0; i < 50; i++) \{\
-            let heart = document.createElement("div");\
-            heart.innerHTML = "\uc0\u55357 \u56470 ";\
-            heart.classList.add("heart");\
-            heart.style.left = Math.random() * 100 + "vw";\
-            heart.style.animationDuration = (3 + Math.random() * 3) + "s";\
-            document.body.appendChild(heart);\
-        \}\
-    \}\
-\
-    function createConfetti() \{\
-        for (let i = 0; i < 80; i++) \{\
-            let confetti = document.createElement("div");\
-            confetti.innerHTML = "\uc0\u55356 \u57145 ";\
-            confetti.classList.add("heart");\
-            confetti.style.left = Math.random() * 100 + "vw";\
-            confetti.style.animationDuration = (4 + Math.random() * 3) + "s";\
-            document.body.appendChild(confetti);\
-        \}\
-    \}\
-</script>\
-\
-</body>\
-</html>\
+        h1 {
+            margin-top: 100px;
+            font-size: 40px;
+            color: #cc0066;
+        }
+
+        .button {
+            padding: 15px 35px;
+            font-size: 20px;
+            margin: 20px;
+            background-color: #ff0066;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+        #surprise {
+            display: none;
+            margin-top: 40px;
+        }
+
+        img {
+            width: 320px;
+            border-radius: 20px;
+        }
+
+        .floating {
+            position: absolute;
+            font-size: 25px;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            from { transform: translateY(100vh); opacity: 1; }
+            to { transform: translateY(-10vh); opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Will You Be My Valentine, HERNAME? 🌹</h1>
+
+<button class="button" onclick="showLove()">YES 💘</button>
+<button class="button" onclick="showLove()">YES OBVIOUSLY 😌</button>
+
+<div id="surprise">
+    <h2>YOU SAID YESSSSS 😭❤️</h2>
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+    <h2>I LOVE YOU SO MUCH 🌹✨</h2>
+</div>
+
+<script>
+function showLove() {
+    document.getElementById("surprise").style.display = "block";
+
+    for (let i = 0; i < 60; i++) {
+        let rose = document.createElement("div");
+        rose.innerHTML = "🌹";
+        rose.className = "floating";
+        rose.style.left = Math.random() * 100 + "vw";
+        rose.style.animationDuration = (4 + Math.random() * 3) + "s";
+        document.body.appendChild(rose);
+    }
+
+    for (let i = 0; i < 60; i++) {
+        let heart = document.createElement("div");
+        heart.innerHTML = "💖";
+        heart.className = "floating";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+        document.body.appendChild(heart);
+    }
 }
+</script>
+
+</body>
+</html>
